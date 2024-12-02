@@ -2,13 +2,13 @@
 def shrink(s):
     new_s = ""
     for index in range(len(s)):
-        if s[index] != s[index - 1]:
+        if index == 0 or s[index] != s[index - 1]:
             new_s += s[index]
             
-    return()
+    return(new_s)
 
-print(shrink("AAAABBCCCCCCD")    #"ABCD"
-print(shrink("ABCD")
+print(shrink("AAAABBCCCCCCD"))    #"ABCD"
+print(shrink("ABCD"))
 
 print(shrink("hello"))          # "helo"
 print(shrink("yayyy"))          # "yay"
