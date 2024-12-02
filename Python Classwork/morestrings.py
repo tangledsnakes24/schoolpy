@@ -25,12 +25,20 @@ print(shrink("aa"))             # "a"
 def destroy(s):
     new_s = ""
     for index in range(len(s)):
-        next_char = s[index + 1]
-        curr_char = s[index]
-        prev_char = s[index - 1]
+        
 
-        if "!" not in next_char + curr_char + prev_char:
-            new_s += curr_char
+        if index == 0:
+            substr = s[0 : 2]
+
+
+        elif index == len(s) - 1:
+            substr = s[index - 1 : len(s)]
+
+        else:
+            substr = s[index - 1: index + 2]
+
+        if "!" not in substr:
+            new_s += s[index]
         
     
     return(new_s)
