@@ -8,7 +8,12 @@ You may assume that there will be no nested parentheses, and that all parenthese
 
 
 def erase_parentheticals(s):
-    
+    new_s = ""
+    inside_parens = False
+
+    for char in s:
+        if inside_parens == False:
+            new_s += char
     # CODE GOES HERE
     return()
 
