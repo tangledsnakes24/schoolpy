@@ -8,10 +8,16 @@ You may assume that there will be no nested parentheses, and that all parenthese
 
 
 def erase_parentheticals(s):
+    
     # CODE GOES HERE
     return()
 
 print(erase_parentheticals("h(ello w)o(r)ld"))       # hold
+print(erase_parentheticals("era(se)"))               #era
+print(erase_parentheticals("(erase)"))      #""
+print(erase_parentheticals("(p)a(ren)s"))   #as
+print(erase_parentheticals("p(a)re(ns)"))   #pre
+print(erase_parentheticals("pa(r)(e)ns"))   #pans
 # MORE TESTS GO HERE
 
 
