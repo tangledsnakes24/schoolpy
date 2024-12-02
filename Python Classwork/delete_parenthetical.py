@@ -12,8 +12,16 @@ def erase_parentheticals(s):
     inside_parens = False
 
     for char in s:
+        if char == "(":
+            inside_parens = True
+        if char == ")":
+            inside_parens = False
+
+
         if inside_parens == False:
             new_s += char
+
+        
     # CODE GOES HERE
     return(new_s)
 
