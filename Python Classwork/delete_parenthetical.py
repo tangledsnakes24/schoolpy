@@ -15,7 +15,7 @@ def erase_parentheticals(s):
         if inside_parens == False:
             new_s += char
     # CODE GOES HERE
-    return()
+    return(new_s)
 
 print(erase_parentheticals("h(ello w)o(r)ld"))       # hold
 print(erase_parentheticals("era(se)"))               #era
