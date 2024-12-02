@@ -14,12 +14,15 @@ def erase_parentheticals(s):
     for char in s:
         if char == "(":
             inside_parens = True
+
+        if inside_parens == False:
+            new_s += char
+            
         if char == ")":
             inside_parens = False
 
 
-        if inside_parens == False:
-            new_s += char
+        
 
         
     # CODE GOES HERE
