@@ -23,7 +23,17 @@ print(shrink("aa"))             # "a"
 
 
 def destroy(s):
-    return()
+    new_s = ""
+    for index in range(len(s)):
+        next_char = s[index + 1]
+        curr_char = s[index]
+        prev_char = s[index - 1]
+
+        if "!" not in next_char + curr_char + prev_char:
+            new_s += curr_char
+        
+    
+    return(new_s)
 
 print(destroy("k!ablam"))       # "blam"
 print(destroy("st!rings"))      # "sings"
