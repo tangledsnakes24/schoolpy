@@ -24,8 +24,22 @@ t(5)
 #                  .....
 
 """ Problem 2: Pyramid """
-
+#last row is 1*2(n-1) dots
+#first row has n-1 spaces before and after dot
+#second row has n-2 spaces on each side of 3 dots
+#3rd row is n-3 spaces, for 5 dots
+#4th row is n-4 spaces, 7 dots
+#etc
 def p(n):
+    counter = 0
+    n_spaces = n - 1
+    n_dots = 1
+    while counter != n:
+        print(n_spaces * " " + n_dots * "." + n_spaces * " ")
+        n_spaces -= 1
+        n_dots += 2
+        counter += 1
+              
     return()
 
 p(3)
