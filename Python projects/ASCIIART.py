@@ -105,7 +105,14 @@ def x(n):
         side_dots += 1
     
 #middle
-    print("?" * n)
+    if(n % 2 == 0):
+        n_dots = int((n - 2) / 2)
+        print(n_dots * "." + "x" + n_dots * ".")
+    else:
+            
+        #1 x
+        n_dots = int((n - 1) / 2)
+        print(n_dots * "." + "x" + n_dots * ".")
 
 
 #last rows
