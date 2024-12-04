@@ -1,11 +1,16 @@
 """ Problem 1: Triangle """
 #one more string tool
 #multiply strings by intigers
-
+"""
 s = ":)"
 print(s * 10)
-
+"""
 def t(n):
+    dotcount = 0
+    while dotcount < n:
+        dotcount += 1
+        print(dotcount * ".")
+    print()
     return()
 
 t(3)
