@@ -1,4 +1,9 @@
 """ Problem 1: Triangle """
+#one more string tool
+#multiply strings by intigers
+
+s = ":)"
+print(s * 10)
 
 def t(n):
     return()
