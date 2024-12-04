@@ -114,7 +114,7 @@ def x(n):
         n_dots = int((n - 1) / 2)
         print(n_dots * "." + "x" + n_dots * ".")
         btwn = 1
-        side_dots += 1
+        side_dots -= 1
 
 
 #last rows
