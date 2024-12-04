@@ -39,7 +39,7 @@ def p(n):
         n_spaces -= 1
         n_dots += 2
         counter += 1
-              
+    
     return()
 
 p(3)
@@ -51,15 +51,75 @@ p(5)
 #   .        ...        .....
 #  ...      .....      .......
 # .....    .......    .........
+""" Problem 2.5: X """
+"""
+#how many rows      how many x       where is x    how many more . after x
+1                   1               index(1)
+2                   2               index 2
+3                   3               3
+4                   4
+5                   5
+"""
+
+
+def dia(n):
+    for row in range(n):
+        
+        print("." * row + "x" + "." * (n-row - 1))
+    print()
+    return()
+
+dia(3)
+dia(4)
+dia(5)
+
+#             X....
+#       X...  .X...
+# X..   .X..  ..X..
+# .X.   ..X.  ...X.
+# ..X   ...X  ....X
+
+
+
 
 """ Problem 3: X """
+"""
+dots before    dots between   dots after  sum(dots + x's)
+0              n-2            0           n
+1              n-4              
+2              n-8
+3              
+4
+once dots between is 0 or negative, swtich to add dots between
 
+
+
+"""
 def x(n):
+    btwn = n-2
+    side_dots = 0
+#first few rows, not middle, not bottom
+    while btwn > 0:
+        print("." * side_dots + "x" + "." * btwn + "x" + "." * side_dots)
+        btwn -= 2
+        side_dots += 1
+    
+#middle
+    print("?" * n)
+
+
+#last rows
+    while side_dots >= 0:
+        print("." * side_dots + "x" + "." * btwn + "x" + "." * side_dots)
+        btwn += 2
+        side_dots -= 1
+    print()
     return()
 
 x(3)
 x(4)
 x(5)
+x(9)
 
 #             X...X
 #       X..X  .X.X.
