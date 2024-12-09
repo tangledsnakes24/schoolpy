@@ -11,7 +11,20 @@ If the original word started with a capital letter, the output should too.
 """
 
 def pig_latin(s):
-    return("")
+    nonvowelstr = ''
+    vowelstr = ''
+    latinified = ''
+    for char in s:
+        if char not in "aeiouyAEIOUY":
+            nonvowelstr += char
+        else:
+            vowelstr += char
+
+    latinified = vowelstr + nonvowelstr + 'ay'
+        
+
+
+    return(latinified)
 
 print(pig_latin("hello"))           # "ellohay"
 print(pig_latin("world"))           # "orldway"
