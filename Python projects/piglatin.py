@@ -7,7 +7,7 @@ Given an integer word s, pig-latin-ify it! That is,
     if s starts with a consonant cluster, move it to the end and add -ay.
     if s starts with a vowel (aeiouy), just add -ay to the end.
 If the original word started with a capital letter, the output should too.
-
+.upper or .lower to change case of letter
 """
 
 def pig_latin(s):
