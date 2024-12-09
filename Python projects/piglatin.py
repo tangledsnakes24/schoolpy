@@ -70,11 +70,17 @@ print(de_pig_latin_sentence("odingcay isay unfay"))                     # "codin
 Give a pig-latin-ified sentence, count how many possible sentences it can de-pig-latin-ify to.
 Also, return a list (in any order) with all possible sentences it can de-pig-latin-ify to.
 
-"""
 
+"""
+def de_pig_latin_sentence_count(s):
+
+    return()
 print(de_pig_latin_sentence_count("ellohay orldway"))                           # 10
 print(de_pig_latin_sentence_count("odingcay isay unfay"))                       # 24
 
+
+def de_pig_latin_sentence_list(s):
+    return()
 print(de_pig_latin_sentence_list("youay anday iay"))                            # ["you and i", "you dan i", "you nda i"]
 print(de_pig_latin_sentence_list("ehay umpsjay"))                               # ["he umpsj", "eh umpsj", 
                                                                                 # "he jumps", "eh jumps", 
