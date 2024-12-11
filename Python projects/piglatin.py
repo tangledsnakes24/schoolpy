@@ -58,8 +58,9 @@ def pig_latin_sentence(s):
         
         str(element)
         finalpig += str(element) + " "
-        #find a way to remove the last space
         finalpig = finalpig[0:len(s) - 1]
+
+        #find a way to make capital and lowercase letters work
     
 
 
