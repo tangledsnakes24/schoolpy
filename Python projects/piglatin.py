@@ -48,8 +48,10 @@ However, you must maintain the original case (upper vs. lower) of each word in t
 
 def pig_latin_sentence(s):
     words = s.split(" ")
+    piglatin = []
     for word in words:
-        pig_latin(words)
+        pig_latin(word)
+        piglatin += [pig_latin(word)]
     
 
 
@@ -57,7 +59,7 @@ def pig_latin_sentence(s):
 
 
     
-    return(word)
+    return(piglatin)
 
 print(pig_latin_sentence("hello world"))                                # "ellohay orldway"
 print(pig_latin_sentence("python is fun"))                              # "ythonpay isay unfay"
