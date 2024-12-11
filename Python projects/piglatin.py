@@ -21,8 +21,11 @@ def pig_latin(s):
             nonvowelstr += char
         else:
             break
-
+        
+#find a way to make the capital and lowercase letters work. maybe look at the index of the letter and if it == 1 then .upper it and if not then .lowwer it
     latinified = s[index:len(s)] + nonvowelstr + 'ay'
+
+    
     
         
 
@@ -44,7 +47,14 @@ However, you must maintain the original case (upper vs. lower) of each word in t
 """
 
 def pig_latin_sentence(s):
-    return("")
+    split = ''
+    split = s.split(" ")
+    pig_latin(split)
+    
+
+
+    
+    return(pig_latin)
 
 print(pig_latin_sentence("hello world"))                                # "ellohay orldway"
 print(pig_latin_sentence("python is fun"))                              # "ythonpay isay unfay"
