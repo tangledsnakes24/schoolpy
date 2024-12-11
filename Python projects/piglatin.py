@@ -14,13 +14,16 @@ def pig_latin(s):
     nonvowelstr = ''
     vowelstr = ''
     latinified = ''
-    for char in s:
+    
+    for index in range (len(s)):
+        char = s[index]
         if char not in "aeiouyAEIOUY":
             nonvowelstr += char
         else:
-            vowelstr += char
+            break
 
-    latinified = vowelstr + nonvowelstr + 'ay'
+    latinified = s[index:len(s)] + nonvowelstr + 'ay'
+    
         
 
 
