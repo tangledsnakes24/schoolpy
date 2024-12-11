@@ -37,7 +37,7 @@ print(pig_latin("world"))           # "orldway"
 print(pig_latin("String"))          # "Ingstray"
 print(pig_latin("Alphabet"))        # "Alphabetay"
 print(pig_latin("yay"))             # "yayay"
-
+print("________________________")
 """ Problem 2: pig_latin_sentence
 
 Given a sentence, pig-latin-ify it. That is, pig-latin-ify each word, then put them back into a sentence.
@@ -58,6 +58,7 @@ def pig_latin_sentence(s):
         
         str(element)
         finalpig += str(element) + " "
+        
         finalpig = finalpig[0:len(s) - 1]
 
         #find a way to make capital and lowercase letters work
@@ -74,7 +75,7 @@ print(pig_latin_sentence("hello world"))                                # "elloh
 print(pig_latin_sentence("python is fun"))                              # "ythonpay isay unfay"
 print(pig_latin_sentence("Hello World"))                                # "Ellohay Orldway"
 print(pig_latin_sentence("Very strange"))                               # "Eryvay angestray"
-
+print("___________________________")
 """ Problem 3: de_pig_latin
 
 Given a string s, return a list of all possible strings that pig-latin-ify to s.
@@ -83,6 +84,11 @@ Again, maintain the proper case. Your list may have the candidate strings in any
 """
 
 def de_pig_latin(s):
+
+
+
+
+   # final = x + y - 'ay'
     return("")
 
 print(de_pig_latin("ellohay"))           # ["hello", "elloh"]
