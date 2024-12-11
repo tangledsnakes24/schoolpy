@@ -47,14 +47,17 @@ However, you must maintain the original case (upper vs. lower) of each word in t
 """
 
 def pig_latin_sentence(s):
-    split = ''
-    split = s.split(" ")
-    pig_latin(split)
+    words = s.split(" ")
+    for word in words:
+        pig_latin(words)
     
 
 
     
-    return(pig_latin)
+
+
+    
+    return(word)
 
 print(pig_latin_sentence("hello world"))                                # "ellohay orldway"
 print(pig_latin_sentence("python is fun"))                              # "ythonpay isay unfay"
