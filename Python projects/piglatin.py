@@ -84,6 +84,9 @@ Again, maintain the proper case. Your list may have the candidate strings in any
 """
 
 def de_pig_latin(s):
+    delatinfied = ""
+    for index in range(len(s)):
+        
 
 
 
