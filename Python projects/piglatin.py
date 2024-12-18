@@ -89,21 +89,26 @@ Again, maintain the proper case. Your list may have the candidate strings in any
 
 
 def de_pig_latin(s):
-    delatinfied = ""
-    lastletter = ""
-    char = s[index]
+   
+    delatinified = [s]
+    
+    
+    
     s = s[0:len(s) - 2]
     while s[len(s) - 1] not in "AEIOUYaeiouy":
-        lastletter += char
-        s - lastletter
-        lastletter + s
+        notlastletter = s[0:len(s) - 1]
+        lastletter = s[len(s) - 1]
+        s = lastletter + notlastletter
+        delatinified += [s]
+        
+        
+        
+       
     
        
         
-        #remove ay
-        #go backwards through word and remove all consenents to a list
-        # add consenents list + original word-consenents
-        #return the combination of the two lists
+        #remove ay (done)
+       #loop backwards through word, remove last letter and add it to front, add that word to a list, rinse and repeat until the last letter is a vowel
    
        
 
