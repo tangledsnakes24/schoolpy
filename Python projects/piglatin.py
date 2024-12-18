@@ -83,16 +83,35 @@ Again, maintain the proper case. Your list may have the candidate strings in any
 
 """
 
+
+
+
+
+
 def de_pig_latin(s):
     delatinfied = ""
-    for index in range(len(s)):
+    lastletter = ""
+    char = s[index]
+    s = s[0:len(s) - 2]
+    while s[len(s) - 1] not in "AEIOUYaeiouy":
+        lastletter += char
+        s - lastletter
+        lastletter + s
+    
+       
         
+        #remove ay
+        #go backwards through word and remove all consenents to a list
+        # add consenents list + original word-consenents
+        #return the combination of the two lists
+   
+       
 
 
 
 
-   # final = x + y - 'ay'
-    return("")
+   
+    return(delatinified)
 
 print(de_pig_latin("ellohay"))           # ["hello", "elloh"]
 print(de_pig_latin("orldway"))           # ["orldw", "world", "dworl", "ldwor", "rldwo"]
