@@ -132,7 +132,20 @@ Again, assume there is no punctuation, and that spacing is consistent.
 """
 
 def de_pig_latin_sentence(s):
-    return("")
+    words = s.split(" ")
+    english = []
+    finaleng = ''
+    for word in words:
+        de_pig_latin(word)
+        english += [de_pig_latin(word)]
+
+    for element in english:
+        
+        str(element)
+        finaleng += str(element) + " "
+        
+        finaleng = finaleng[0:len(s) - 1]
+    return(finaleng)
 
 print(de_pig_latin_sentence("ellohay orldway"))                         # "hello world" or "elloh dworl" or...
 print(de_pig_latin_sentence("odingcay isay unfay"))                     # "coding is fun" or "ngcodi si nfu" or...
