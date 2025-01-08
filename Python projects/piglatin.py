@@ -90,11 +90,12 @@ Again, maintain the proper case. Your list may have the candidate strings in any
 
 def de_pig_latin(s):
    
-    delatinified = [s]
+    
     
     
     
     s = s[0:len(s) - 2]
+    delatinified = [s]
     while s[len(s) - 1] not in "AEIOUYaeiouy":
         notlastletter = s[0:len(s) - 1]
         lastletter = s[len(s) - 1]
@@ -123,7 +124,7 @@ print(de_pig_latin("orldway"))           # ["orldw", "world", "dworl", "ldwor", 
 print(de_pig_latin("Ingstray"))          # ["Ingstray", "Ringst", "Trings", "String", "Gstrin", "Ngstri"]
 print(de_pig_latin("Alphabetay"))        # ["Alphabet", "Talphabe"]
 print(de_pig_latin("yayay"))             # ["yay"]
-
+print("______________")
 """ Problem 4: de_pig_latin_sentence
 
 Give a pig-latin-ified sentence, de-pig-latin-ify it. You may choose ANY candidate sentence to return.
@@ -137,19 +138,20 @@ def de_pig_latin_sentence(s):
     finaleng = ''
     for word in words:
         de_pig_latin(word)
-        english += [de_pig_latin(word)]
+        english += [de_pig_latin(word)[0]]
 
     for element in english:
         
         str(element)
         finaleng += str(element) + " "
         
+        
         finaleng = finaleng[0:len(s) - 1]
     return(finaleng)
 
 print(de_pig_latin_sentence("ellohay orldway"))                         # "hello world" or "elloh dworl" or...
 print(de_pig_latin_sentence("odingcay isay unfay"))                     # "coding is fun" or "ngcodi si nfu" or...
-
+print("_________________")
 
 """ Problem 5: de_pig_latin_sentence_count and de_pig_latin_sentence_list [BONUS!]
 
