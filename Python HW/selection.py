@@ -85,3 +85,22 @@ print(double_selection_sort([5, 4, 3, 2, 1]))  # [1, 2, 3, 4, 5]
 print(double_selection_sort([1, 3, 5, 2, 4]))  # [1, 2, 3, 4, 5]
 print()
 print("______________________")
+
+
+
+def merge(l1, l2):
+    return()
+
+
+def merge_sort(l):
+    if len(l) == 1:
+        return(l)
+    if len(l) == 2:
+        if l[0] > l[1]:
+            return([l[1], l[0]])
+        else:
+            return(l)
+        
+    left = l[:int(len(l)/2)]
+    right = l[int(len(l)/2):]
+    return()
