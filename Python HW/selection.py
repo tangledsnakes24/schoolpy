@@ -90,7 +90,8 @@ print("______________________")
 
 def merge(l1, l2):
     return()
-
+print(merge([1, 2, 4, 5, 3, 7], [2, 4]))
+print(merge([1, 3, 5, 2, 6, 7, 4], [2, 4]))
 
 def merge_sort(l):
     if len(l) == 1:
@@ -106,3 +107,6 @@ def merge_sort(l):
     left = merge_sort(left)
     right = merge_sort(right)
     return(merge(left, right))
+
+
+
