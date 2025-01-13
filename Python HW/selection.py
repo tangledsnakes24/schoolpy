@@ -21,10 +21,13 @@ print("______________________")
 # Problem 1: Remove
 
 def remove(element, l):
+    flag = False
     new_l = []
     for e in l:
-        if e != element:
-            new_l += [e]
+        if ((e != element) or (flag == True)):
+                new_l += [e]
+        else:
+            flag = True
             
     return(new_l)
 
@@ -33,6 +36,7 @@ print(remove(1, [1, 2, 3, 4]))          # [2, 3, 4]
 print(remove(2, [1, 2, 3, 4]))          # [1, 3, 4]
 print(remove(3, [1, 2, 3, 4]))          # [1, 2, 4]
 print(remove(4, [1, 2, 3, 4]))          # [1, 2, 3]
+print(remove(1, [1, 1, 2, 3, 4]))       # [1, 2, 3, 4]
 print()
 print("______________________")
 # Problem 2: Selection Sort
