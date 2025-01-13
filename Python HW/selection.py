@@ -42,7 +42,13 @@ print("______________________")
 # Problem 2: Selection Sort
 
 def selection_sort(l):
-    return()
+    new_l = []
+    while len(l) != 0:
+        smallest = minimum(l)  #get smallest
+        new_l += [smallest] #add to new_l
+        l = remove(smallest, l) #remove smallest from list
+        
+    return(new_l)
 
 print("Testing Selection Sort...")
 print(selection_sort([1, 2, 3, 4]))     # [1, 2, 3, 4]
