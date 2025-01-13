@@ -103,4 +103,6 @@ def merge_sort(l):
         
     left = l[:int(len(l)/2)]
     right = l[int(len(l)/2):]
-    return()
+    left = merge_sort(left)
+    right = merge_sort(right)
+    return(merge(left, right))
