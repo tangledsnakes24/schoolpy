@@ -144,8 +144,6 @@ def de_pig_latin_sentence(s):
         
         str(element)
         finaleng += str(element) + " "
-        
-        
         finaleng = finaleng[0:len(s) - 1]
     return(finaleng)
 
