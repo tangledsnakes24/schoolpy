@@ -45,7 +45,15 @@ print("____________________________")
 # Problem 1: Insertion Sort
 
 def insertion_sort(l):
-    return()
+    new_l = []
+    while len(l) != 0:
+        element = l[0]
+        new_l = insert(element, new_l)
+        l = l[1:]
+        
+        
+    
+    return(new_l)
 
 print("Testing Insertion Sort...")
 
