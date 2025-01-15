@@ -79,6 +79,29 @@ print(swap([1, 2, 4, 3], 2, 3))         # [1, 2, 3, 4]
 print()
 print("____________________________")
 
+
+
+#problem 2.5 merge sort
+
+def merge_sort(l):
+    if len(l) == 1:
+        return(l)
+    if len(l) == 2:
+        if l[0] > l[1]:
+            return([l[1], l[0]])
+        else:
+            return(l)
+    #recursion    
+    left = l[:int(len(l)/2)]
+    right = l[int(len(l)/2):]
+    left = merge_sort(left)
+    right = merge_sort(right)
+    return(merge(left, right))
+print("testing merge sort....")
+print(merge_sort([1, 2, 3, 4]))
+print(merge_sort([1, 3, 4, 2]))
+print(merge_sort([3, 1, 2, 4]))
+
 # Problem 3: Bubble Sort
 
 def bubble_sort(l):
