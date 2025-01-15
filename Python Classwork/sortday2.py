@@ -7,16 +7,15 @@ def merge(l1, l2):
     new_l = []
     while index1 < len(l1) and index2 < len(l2):
         if l1[index1] > l2[index2]:
-            new_l += l2[index2]
+            new_l += [l2[index2]]
             index2 += 1
         else:
-            new_l += l1[index1]
+            new_l += [l1[index1]]
             index1 += 1
             
     return(new_l)
 
-
-
+print("testing merge....")
 print(merge([1, 3, 5], [2, 4])) # 12345
 print(merge([1], [2, 3, 4, 5])) #12345
 print(merge([1, 5], [2, 3, 4])) #12345
