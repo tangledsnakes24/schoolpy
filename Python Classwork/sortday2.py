@@ -83,7 +83,8 @@ print("____________________________")
 
 #problem 2.5 merge sort
 
-def merge_sort(l):
+def merge_sort(l, depth):
+    print(depth * " " + "I am currently sorting" + str(l))
     if len(l) == 1:
         return(l)
     if len(l) == 2:
@@ -94,14 +95,15 @@ def merge_sort(l):
     #recursion    
     left = l[:int(len(l)/2)]
     right = l[int(len(l)/2):]
-    left = merge_sort(left)
-    right = merge_sort(right)
+    
+    left = merge_sort(left, depth + 1)
+    right = merge_sort(right, depth + 1)
     return(merge(left, right))
 print("testing merge sort....")
-print(merge_sort([1, 2, 3, 4]))
-print(merge_sort([1, 3, 4, 2]))
-print(merge_sort([3, 1, 2, 4]))
-print(merge_sort([1, 4, 3, 2, 5, 6, 7, 8, 12, 11, 10, 45, 20, 35, 36, 23, 42, 52, 32, 73, 69, 13, 39, 29, 43, -1, -100, -2, 5]))
+print(merge_sort([1, 2, 3, 4], 0))
+print(merge_sort([1, 3, 4, 2], 0))
+print(merge_sort([3, 1, 2, 4], 0))
+print(merge_sort([1, 4, 3, 2, 5, 6, 7, 8, 12, 11, 10, 45, 20, 35, 36, 23, 42, 52, 32, 73, 69, 13, 39, 29, 43, -1, -100, -2, 5], 0))
 # Problem 3: Bubble Sort
 
 def bubble_sort(l):
