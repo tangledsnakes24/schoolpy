@@ -12,7 +12,12 @@ def merge(l1, l2):
         else:
             new_l += [l1[index1]]
             index1 += 1
-            
+    if index1 >= len(l1):
+        #we have all of l1 already. take my new list, take l2 and add from index
+        new_l += l2[index2:]
+    else:
+        #we have everything from l2
+        new_l += l1[index1:]
     return(new_l)
 
 print("testing merge....")
