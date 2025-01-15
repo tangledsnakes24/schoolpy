@@ -101,7 +101,7 @@ print("testing merge sort....")
 print(merge_sort([1, 2, 3, 4]))
 print(merge_sort([1, 3, 4, 2]))
 print(merge_sort([3, 1, 2, 4]))
-
+print(merge_sort([1, 4, 3, 2, 5, 6, 7, 8, 12, 11, 10, 45, 20, 35, 36, 23, 42, 52, 32, 73, 69, 13, 39, 29, 43, -1, -100, -2, 5]))
 # Problem 3: Bubble Sort
 
 def bubble_sort(l):
