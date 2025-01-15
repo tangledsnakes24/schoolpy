@@ -2,14 +2,25 @@
 
 #problem -1
 def merge(l1, l2):
-    return()
+    index1 = 0
+    index2 = 0
+    new_l = []
+    while index1 < len(l1) and index2 < len(l2):
+        if l1[index1] > l2[index2]:
+            new_l += l2[index2]
+            index2 += 1
+        else:
+            new_l += l1[index1]
+            index1 += 1
+            
+    return(new_l)
 
 
 
-print(merge([1, 3, 5], [2, 4]))
-print(merge([1], [2, 3, 4, 5]))
-print(merge([1, 5], [2, 3, 4]))
-print(merge([1, 2, 3, 4], [5]))
+print(merge([1, 3, 5], [2, 4])) # 12345
+print(merge([1], [2, 3, 4, 5])) #12345
+print(merge([1, 5], [2, 3, 4])) #12345
+print(merge([1, 2, 3, 4], [5])) #12345
 # Problem 0: Insert
 #while list isnt empty:
 #remove 0th element of l
@@ -17,10 +28,7 @@ print(merge([1, 2, 3, 4], [5]))
 #repeat until sorted
 #assume l is in ascendng order
 def insert(element, l):
-    new_l = []
-    for element in l:
-    
-    return()
+    return(merge([element], l))
 
 print("Testing Insert...")
 print(insert(1, [2, 3, 4]))            # [1, 2, 3, 4]
