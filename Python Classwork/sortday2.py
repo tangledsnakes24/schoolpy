@@ -1,11 +1,24 @@
 """ Sorting Day II: Insertion and Bubble """
 
+#problem -1
+def merge(l1, l2):
+    return()
+
+
+
+print(merge([1, 3, 5], [2, 4]))
+print(merge([1], [2, 3, 4, 5]))
+print(merge([1, 5], [2, 3, 4]))
+print(merge([1, 2, 3, 4], [5]))
 # Problem 0: Insert
 #while list isnt empty:
 #remove 0th element of l
 #insert it into new_l in correct position
 #repeat until sorted
+#assume l is in ascendng order
 def insert(element, l):
+    new_l = []
+    for element in l:
     
     return()
 
