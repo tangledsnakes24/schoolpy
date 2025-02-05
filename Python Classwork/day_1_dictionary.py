@@ -1,15 +1,35 @@
+#dictionary is very simular to list
+#uses { instead of ]
+#data is "a": 1, "b":2
+#letter is key, number is value
+#keys can be anything, values can be anything (more or less) keys cant be complex data(list dictionary etc)
+
+
+days = {5: "wed",
+        6: "thurs",
+        7: "fri",
+        7: "blue",
+        5: "purple",
+        }
+#to index into dictionary, use print(name[key or value]
+print(days[7])
+
+
+
 """ Day 1: Dictionaries """
 
-d1 = {"A": 1, "B": 2, "C": 3}
+#d1 = {"A": 1, "B": 2, "C": 3}
 
 # Updating Dictionaries
-
+days[4] = "tuesday"
+days[3] = "monday"
+print(days)
 
 
 # Getting Keys and Values
 
-d.keys()
-d.values()
+#d1.keys()
+#d1.values()
 
 # Looping over Dictionaries
 
