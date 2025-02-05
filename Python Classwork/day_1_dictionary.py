@@ -69,7 +69,19 @@ print(cardinal(5))
 
 
 def get_highest(d):
-    return()
+
+#figure out largest value
+    all_values = list(d.values())
+    largest_value = max(all_values)
+
+
+
+#figure out which keys have that value
+    keys_with_value = []
+    for key in d:
+        if d[key] == largest_value:
+            keys_with_value += [key]
+    return(keys_with_value)
 
 print("Testing Problem 0: Get Highest...")
 
