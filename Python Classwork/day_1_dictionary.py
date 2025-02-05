@@ -42,6 +42,27 @@ print(list(days.values()))
 for key in days:
     print("day number " + str(key) + " is a " + days[key])
 
+#problem -1
+def cardinal(n):
+    endings = {0: "th",
+               1: "st",
+               2: "nd",
+               3: "rd",
+               }
+    last_dig = n % 10
+    if last_dig in [4, 5, 6, 7, 8 , 9]:
+        return(str(n) + "th")
+    else:
+        return(str(n) + endings[last_dig])
+    return()
+
+
+print(cardinal(0)) #0th
+print(cardinal(1)) #1st
+print(cardinal(2)) #2nd
+print(cardinal(3)) #3rd
+print(cardinal(4))
+print(cardinal(5))
 
 
 # Problem 0: Get Highest
