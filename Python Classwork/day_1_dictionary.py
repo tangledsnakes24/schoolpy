@@ -4,7 +4,7 @@
 #letter is key, number is value
 #keys can be anything, values can be anything (more or less) keys cant be complex data(list dictionary etc)
 
-
+#allowed to have same value for different key, but not same key for diff value
 days = {5: "wed",
         6: "thurs",
         7: "fri",
@@ -18,19 +18,25 @@ print(days[7])
 
 """ Day 1: Dictionaries """
 
-#d1 = {"A": 1, "B": 2, "C": 3}
 
 # Updating Dictionaries
+print("updating dictionaries")
 days[4] = "tuesday"
 days[3] = "monday"
 print(days)
 
 
 # Getting Keys and Values
-
-#d1.keys()
-#d1.values()
-
+print("getting keys and values")
+d1 = {"A": 1, "B": 2, "C": 3}
+d1.keys()
+d1.values()
+days ={5: "tuesday",
+       6: "wednsday",
+       7: "thursday",
+       }
+print(list(days.keys()))
+print(list(days.values()))
 # Looping over Dictionaries
 
 
