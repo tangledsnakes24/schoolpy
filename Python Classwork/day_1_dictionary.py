@@ -99,14 +99,30 @@ print()
 
 # Problem 1: Modes
 
-def modes(l):
-    return()
+def modes(s):
+    #count how many times each time a letter appears, store it in a dictionary
+    letter_counts = {}
+    seen_so_far = []
+    for letter in s:
+        if letter not in seen_so_far:
+            letter_counts[letter] = 1
+            seen_so_far += [letter]
+        else:
+            letter_counts[letter] += 1
+
+
+
+    #figure out which letter appears the most
+    
+    
+    return(get_highest(letter_counts))
 
 print("Testing Problem 1: Modes...")
 
 print(modes("AAAAAA B C D E"))      # ["A"]
 print(modes("A B C D EEEEEE"))      # ["E"]
 
+print(modes("AAAA"))
 print(modes("aaaa"))            # ["A"]
 print(modes("aAAA"))            # ["A"]
 print(modes("aaAA"))            # ["a", "A"]
