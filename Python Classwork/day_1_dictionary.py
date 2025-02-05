@@ -39,7 +39,8 @@ print(list(days.keys()))
 print(list(days.values()))
 # Looping over Dictionaries
 
-
+for key in days:
+    print("day number " + str(key) + " is a " + days[key])
 
 
 
