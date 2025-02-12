@@ -44,7 +44,13 @@ print()
 # Problem 2: Get All Faves
 
 def get_all_faves(d):
-    return()
+    faves = []
+    for key in d:
+        liked_things = d[key]
+        for thing in liked_things:
+            if thing not in faves:
+                faves += [thing]
+    return(faves)
 
 print("Testing Problem 2: Get All Faves")
 print(get_all_faves(dog_faves))          # ["tummy rubs", "naps", "walks", "rabbits", "growling"]
