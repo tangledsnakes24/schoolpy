@@ -60,7 +60,11 @@ print()
 # Problem 3: Loved by All
 
 def loved_by_all(d):
-    return()
+    l = []
+    for thing in get_all_faves(d):
+        if len(who_loves(d, thing)) == len(d):
+            l += [thing]
+    return(l)
 
 print("Testing Problem 3: Loved By All")
 print(loved_by_all(math_dept_faves))            # ["math"]
