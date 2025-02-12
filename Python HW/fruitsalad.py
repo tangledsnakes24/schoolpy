@@ -16,14 +16,19 @@ salad4 = {"cherry": 30,
 # Problem 1: Total Cost
 
 def total_cost(prices, recipe):
-    return()
+    cost = 0
+    for ingredient in recipe:
+        price = prices[ingredient]
+        quantity = recipe[ingredient]
+        cost += price * quantity
+    return(cost)
 
 prices = {"apple": 3,
           "banana": 2,
           "cherry": 4,
           "dates": 5,
           "elderberry": 6}
-
+print("running total cost")
 print(total_cost(prices, salad1))       # 120 (20 * 3 + 30 * 2)
 print(total_cost(prices, salad2))       # 400 (100 * 4)
 print(total_cost(prices, salad3))       # 14 (3 + 2 + 4 + 5)
