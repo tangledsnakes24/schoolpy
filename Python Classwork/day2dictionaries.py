@@ -1,5 +1,6 @@
 """day 2: Favorite Things """
 
+
 math_dept_faves = {"mr. gold": ["math", "coding", "cats", "dogs"],
                    "mr. letarte": ["math", "cooking", "cats"],
                    "ms. moss": ["math", "set design", "cats"],
@@ -73,11 +74,35 @@ print(loved_by_all(cat_faves))                   # []
 print()
 
 # Problem 4: Most Adored
+def get_highest(d):
+
+#figure out largest value
+    all_values = list(d.values())
+    largest_value = max(all_values)
+
+
+
+#figure out which keys have that value
+    keys_with_value = []
+    for key in d:
+        if d[key] == largest_value:
+            keys_with_value += [key]
+    return(keys_with_value)
+
 
 def most_adored(d):
-    return()
+    #make dictionary with thing:#of people who like it
+    #go back to last class notes
+    liking_count = {}
+    for thing in get_all_faves(d):
+        liking_count[thing] = len(who_loves(d, thing))
+        
+        
+
+    
+    return(get_highest(liking_count))
 
 print("Testing Problem 4: Most Adored")
 print(most_adored(math_dept_faves))         # ["math"]
-print(most_adored(cat_faves))               # ["naps", "springs"]
+print(most_adored(cat_faves))               # ["naps"]
 print(most_adored(dog_faves))               # ["naps", "walks"]
