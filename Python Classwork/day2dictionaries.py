@@ -1,4 +1,4 @@
-""" Favorite Things """
+"""day 2: Favorite Things """
 
 math_dept_faves = {"mr. gold": ["math", "coding", "cats", "dogs"],
                    "mr. letarte": ["math", "cooking", "cats"],
@@ -22,7 +22,12 @@ dog_faves = {"lincoln": ["tummy rubs", "naps", "walks"],
 # Problem 1: Who Loves
 
 def who_loves(d, item):
-    return()
+    ppl_who_like = []
+    for key in d:
+        liked_things = d[key]
+        if item in liked_things:
+            ppl_who_like += [key]
+    return(ppl_who_like)
 
 print("Testing Problem 1: Who Loves")
 print(who_loves(math_dept_faves, "cats"))           # ["mr. gold", "mr. letarte", "ms. moss", "mr. singer"]
@@ -42,8 +47,8 @@ def get_all_faves(d):
     return()
 
 print("Testing Problem 2: Get All Faves")
-print(get_all_faves(dog_favs))          # ["tummy rubs", "naps", "walks", "rabbits", "growling"]
-print(get_all_faves(cat_favs))          # ["scratching", "springs", "naps", "milk"]
+print(get_all_faves(dog_faves))          # ["tummy rubs", "naps", "walks", "rabbits", "growling"]
+print(get_all_faves(cat_faves))          # ["scratching", "springs", "naps", "milk"]
 print()
 
 # Problem 3: Loved by All
@@ -53,8 +58,8 @@ def loved_by_all(d):
 
 print("Testing Problem 3: Loved By All")
 print(loved_by_all(math_dept_faves))            # ["math"]
-print(loved_by_all(dog_favs))                   # ["naps", "walks"]
-print(loved_by_all(cat_favs))                   # []
+print(loved_by_all(dog_faves))                   # ["naps", "walks"]
+print(loved_by_all(cat_faves))                   # []
 print()
 
 # Problem 4: Most Adored
