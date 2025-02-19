@@ -13,6 +13,16 @@ salad3 = {"apple": 1,
 salad4 = {"cherry": 30,
           "elderberry": 20}
 
+
+salad5 = {"cherry": 30,
+          "bannana": 199,
+          "apple": 2
+          }
+
+salad6 = {"kale": 10,
+          "lettuce": 350,
+          "tobacco": 50
+          }
 # Problem 1: Total Cost
 
 def total_cost(prices, recipe):
@@ -43,16 +53,25 @@ pantry = {"apple": 40,
           "elderberry": 0}
 
 def makeable(pantry, recipe):
-    
+    for ingredient in recipe:
+        if ingredient in pantry:
+            if pantry[ingredient] < recipe[ingredient]:
+                #print("not enough " + ingredient)
+                return(False)
+        else:
+            #print(ingredient + "not even in pantry!")
+            return(False)
+            
 
     
-    return()
+    return(True)
 
 print(makeable(pantry, salad1))       # True
 print(makeable(pantry, salad2))       # False (not enough cherries)
 print(makeable(pantry, salad3))       # True
 print(makeable(pantry, salad4))       # False (not enough cherries or elderberries)
-
+print(makeable(pantry, salad5))       #false
+print(makeable(pantry, salad6))       #false  
 # Problem 3: Batches
 
 def batches(pantry, recipe):
