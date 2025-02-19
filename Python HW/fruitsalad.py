@@ -75,7 +75,16 @@ print(makeable(pantry, salad6))       #false
 # Problem 3: Batches
 
 def batches(pantry, recipe):
-    return()
+    l = []
+    for ingredient in recipe:
+
+        if ingredient in pantry:
+            b = int(pantry[ingredient] / recipe[ingredient])
+            l = l + [b]
+
+        else:
+            l += [0]
+    return(min(l))
 
 print(batches(pantry, salad1))       # 1 (enough apples for 2, but not enough bananas)
 print(batches(pantry, salad2))       # 0 (not enough cherries)
