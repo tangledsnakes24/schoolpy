@@ -26,10 +26,32 @@ That is, given two people, return a list of all the likes they have in common.
 
 [Note: The returned list may be in any order.] 
 """
+def get_all_faves(d):
+    faves = []
+
+    for key in d:
+        liked_things = d[key]
+        
+        for thing in liked_things:
+            if thing not in faves:
+                faves = faves + [thing]
+                
+    return(faves)
 
 def common_interests(d, person1, person2):
-    return()
-
+    common = []
+    #liked = d[key]
+    for key in d:
+        person1 = get_all_faves(person#the stuff from the dictionary key for person1
+        person2 = get_all_faves(person2)#the stuff from the dictionary key for person2
+        if faves in person1 and faves in person2:
+            common += int(faves)
+    return(common)
+#for element in dictionary:
+#       go over the favorites of each person
+#       if the itme is in both keys, then add it to a list
+#       else:
+#       dont add it to the list
 print(common_interests(math_dept_faves, "gold", "letarte"))     # ["math", "cats"]
 
 print(common_interests(cat_faves, "yvie", "matzoh"))    # ["naps"]
