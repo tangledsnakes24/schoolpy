@@ -31,12 +31,17 @@ print(letter_to_number("D"))
 print(letter_to_number("E"))
 
 def caesar(message, shift):
-    #build a dictionary
-
-
-
-    #use the dictionary
-    return()
+    new_s = ""
+    for letter in message:
+        if letter == " ":
+            new_s += " "
+        else:
+            num = letter_to_number(letter)
+            num = num + shift
+            new_letter = number_to_letter(num)
+            new_s += new_letter
+        
+    return(new_s)
 
 print(caesar("ABC", 0))             # "ABC"
 print(caesar("ABC", 1))             # "BCD"
