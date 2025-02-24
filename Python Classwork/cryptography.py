@@ -15,8 +15,14 @@ print(number_to_letter(27))
 print(number_to_letter(28))
 print(number_to_letter(29))
 print(number_to_letter(30))
-def letter_to_number(l):
-
+def letter_to_number(letter):
+    
+    all_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    for num in range(1, 27):
+        current_letter = number_to_letter(num)
+        if current_letter == letter:
+            return(num)
+        
     return()
 print(letter_to_number("A"))
 print(letter_to_number("B"))
