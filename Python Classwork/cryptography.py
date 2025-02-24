@@ -86,12 +86,19 @@ letter_to_morse_dict = {"A": ".-",
                         "Z": "--.."}
 
 def morse(message):
-    return()
+    new_message = ""
+    for letter in message:
+        if letter == " ":
+            new_message += "// "
+        else:
+            morse_letter = letter_to_morse_dict[letter]
+            new_message += morse_letter + " "
+    return(new_message[:-1])
 
 print(morse("SOS"))                 # "... --- ..."
 print(morse("HIS"))                 # ".... .. ..."
 print(morse("TOME"))                # "- --- -- ."
-print(morse("TO ME"))               # "- -- // -- ."
+print(morse("TO ME"))               # "- --- // -- ."
 
 
 # Problem 3: Atbash
