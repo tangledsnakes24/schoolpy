@@ -24,6 +24,6 @@ For example, OS is not a bigram in "NO SPACES."
 def bigram_frequency(s):
     return()
 
-print(freq("HELLO"))            # {"HE": 1, "EL": 1, "LL": 1, "LO": 1}
-print(freq("BANANA"))           # {"BA": 1, "AN": 2, "NA": 2}
-print(freq("AN ANGRY BANANA"))  # {"AN": 4, "NG": 1, "GR": 1, "RY": 1, "BA": 1, "NA": 2}
+print(bigram_frequency("HELLO"))            # {"HE": 1, "EL": 1, "LL": 1, "LO": 1}
+print(bigram_frequency("BANANA"))           # {"BA": 1, "AN": 2, "NA": 2}
+print(bigram_frequency("AN ANGRY BANANA"))  # {"AN": 4, "NG": 1, "GR": 1, "RY": 1, "BA": 1, "NA": 2}
