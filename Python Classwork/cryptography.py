@@ -3,6 +3,11 @@
 # Problem 1: Caesar Cipher
 
 def caesar(message, shift):
+    #build a dictionary
+
+
+
+    #use the dictionary
     return()
 
 print(caesar("ABC", 0))             # "ABC"
