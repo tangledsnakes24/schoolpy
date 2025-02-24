@@ -1,6 +1,28 @@
 """ Day 3: Cryptography """
 
 # Problem 1: Caesar Cipher
+def number_to_letter(num):
+    all_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    index = (num - 1) % 26
+    return(all_letters[index])
+print(number_to_letter(1))
+print(number_to_letter(2))
+print(number_to_letter(3))
+print(number_to_letter(4))
+
+
+print(number_to_letter(27))
+print(number_to_letter(28))
+print(number_to_letter(29))
+print(number_to_letter(30))
+def letter_to_number(l):
+
+    return()
+print(letter_to_number("A"))
+print(letter_to_number("B"))
+print(letter_to_number("C"))
+print(letter_to_number("D"))
+print(letter_to_number("E"))
 
 def caesar(message, shift):
     #build a dictionary
