@@ -4,6 +4,9 @@ the number of times each letter appears in the string, ignoring spaces.
 """
 
 def letter_frequency(s):
+
+    #for letter in s:
+    #make a counter, loop over string, for each instance of the letter, counter += 1
     return()
 
 print(freq("HELLO"))            # {"H": 1, "E": 1, "L": 2, "O": 1}
