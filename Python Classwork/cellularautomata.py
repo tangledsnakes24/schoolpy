@@ -44,4 +44,4 @@ def evolve(rule, initial_string, number_generations):
     return()
 
 print(evolve(rule18, ".......x.......", 8))
-print(evolve(rule18, (20 * ".") + "x" + (20 * "."), 400))
+print(evolve(rule18, (20 * ".") + "x" + (20 * "."), 40))
