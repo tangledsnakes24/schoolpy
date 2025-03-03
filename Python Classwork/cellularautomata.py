@@ -33,3 +33,15 @@ def run_rule(rule, s):
 print(run_rule(rule18, "......x......."))
 print(run_rule(rule18, ".....x.x......"))
 print(run_rule(rule18, "....x...x....."))
+
+
+def evolve(rule, initial_string, number_generations):
+    print(initial_string)
+    for gen in range(number_generations):
+        initial_string = run_rule(rule, initial_string)
+        print(initial_string)
+    
+    return()
+
+print(evolve(rule18, ".......x.......", 8))
+print(evolve(rule18, (20 * ".") + "x" + (20 * "."), 400))
