@@ -100,6 +100,6 @@ def evolve(rule, initial_string, number_generations):
 print(evolve(rule18, ".......x.......", 8))
 print(evolve(rule18, (20 * ".") + "x" + (20 * "."), 40))
 print("__________________________________")
-rule169 = rules_gen(169) #37 is cool, so is 69, 57
+rule99 = rules_gen(99) #37 is cool, so is 69, 57
 initial_string = ("." * 30) + "x" + ("x" * 30)
-evolve(rule169, initial_string, 40)
+evolve(rule99, initial_string, 40)
