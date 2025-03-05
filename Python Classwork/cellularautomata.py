@@ -19,6 +19,30 @@ print(rule_string(4))
 print(rule_string(5))
 
 
+print("__________________________________")
+def rules_gen(n):
+    rulestring = rule_string(n)
+
+
+    keys = [ "xxx", "xx.", "x.x", "x..", ".xx", ".x.", "..x", "..."]
+    rule = {}
+    for index in range(8):
+        key = keys[index]
+        value = rulestring[index]
+        rule[key] = value
+    return(rule)
+
+print(rules_gen(13))
+
+
+
+
+
+
+
+
+
+
 
 print("__________________________________")
 rule0 = {"xxx":".",
