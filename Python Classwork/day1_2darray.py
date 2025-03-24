@@ -15,6 +15,13 @@ print(g1[0][0])
 # Problem 1: Fetch
 
 def fetch(grid, x, y):
+    row = grid[y]
+    element = row[x]
+    
+    return(element)
+
+
+    
     return()
 
 print("Testing Fetch...")
