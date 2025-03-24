@@ -10,7 +10,8 @@ g2 = [["x", "o", "x"],
 
 g3 = [[True, True, True, False, True, True, True, False, True],
       [True, False, True, True, True, False, True, True, True]]
-
+print(g1[1])
+print(g1[0][0])
 # Problem 1: Fetch
 
 def fetch(grid, x, y):
