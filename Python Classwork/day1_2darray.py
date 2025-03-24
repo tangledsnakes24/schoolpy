@@ -15,14 +15,16 @@ print(g1[0][0])
 # Problem 1: Fetch
 
 def fetch(grid, x, y):
-    row = grid[y]
-    element = row[x]
-    
-    return(element)
+    if y >= 0  and y < len(grid):       #if row exists
+                 
+        row = grid[y]          #extract it
+        if x >= 0 and x < len(row):      #if element in that row exists
+            element = row[x]        #extract it
+            return(element)   #and return it
 
 
     
-    return()
+    return(None)
 
 print("Testing Fetch...")
 
@@ -47,7 +49,17 @@ m1 = [["?", ".", "."],
       ["X", "?", "?"]]
 
 def count_neighbors(grid, x, y):
-    return()
+    neighbors = []
+    x_coord = x - 1
+    for x_coord in range(x - 1, x + 2):
+        for y_coord in range(y - 1, y + 2):
+            element = fetch(grid, x_coord, y_coord)
+            neighbors += [element]
+    count = 0
+    for element in neighbors:
+        if element == "X":
+            count += 1
+    return(count)
 
 print(count_neighbors(m1, 0, 0))        # 1
 print(count_neighbors(m1, 1, 1))        # 3
