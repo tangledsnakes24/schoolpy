@@ -56,7 +56,7 @@ diag_grid = [["x", ".", ".", "."],
              [".", ".", ".", "x"]]
 
 def can_place(piece, grid, x_ref, y_ref):
-    for coordinate in piece:
+    for coord in piece:
         x_disp = coord[0]
         y_disp = coord[1]
         x_coord = x_ref + x_disp
@@ -81,8 +81,6 @@ print(can_place(upwardt, empty_grid, 1, 2)) #true
 print(can_place(upwardt, empty_grid, 2, 0)) #false
 print(can_place(upwardt, empty_grid, 1, 3)) #false
 print(can_place(upwardt, empty_grid, -1, -1)) #false
-
-
 print(can_place(upwardt, diag_grid, 0, 2))  #true
 print(can_place(upwardt, diag_grid, 2, 0))  #false
 print(can_place(upwardt, diag_grid, 1, 1))  #false
