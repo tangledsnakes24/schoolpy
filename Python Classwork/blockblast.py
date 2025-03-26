@@ -26,7 +26,7 @@ elbow4 = [[0, 1],
 upwardt = [[1, 0],
            [0, 1],
            [1, 1],
-           [1, 2]]
+           [2, 1]]
 """
 Elbows:
 e1     e2     e3     e4
@@ -53,27 +53,21 @@ def can_place(piece, grid, x_ref, y_ref):
             if x_coord >= 0 and x_coord < len(row):
                 element = row[x_coord]
                 if element == "x":
-                    print(str([x_coord, y_coord]))
-                    print("crashes into x")
                     return(False)
             else:
-                print(str([x_coord, y_coord]))
-                print("goes off an edge")
                 return(False)
         else:
-            print(str([x_coord, y_coord]))
-            print("goes off top or bottom")
             return(False)
     return(True)
-#print(can_place(upwardt, empty_grid, 0, 0)) #true
+print(can_place(upwardt, empty_grid, 0, 0)) #true
 print(can_place(upwardt, empty_grid, 1, 2)) #true
-"""print(can_place(upwardt, empty_grid, 2, 0)) #false
+print(can_place(upwardt, empty_grid, 2, 0)) #false
 print(can_place(upwardt, empty_grid, 1, 3)) #false
 print(can_place(upwardt, empty_grid, -1, -1)) #false
 print(can_place(upwardt, diag_grid, 0, 2))  #true
 print(can_place(upwardt, diag_grid, 2, 0))  #false
 print(can_place(upwardt, diag_grid, 1, 1))  #false
-print(can_place(upwardt, diag_grid, 2, 2))  #false"""
+print(can_place(upwardt, diag_grid, 2, 2))  #false
 def place(piece, grid, x, y):
     return()
 def clear(grid):
