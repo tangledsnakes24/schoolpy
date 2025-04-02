@@ -7,7 +7,11 @@ print("Hello there, " + name + "!")
 # Problem 1: Calculator
 
 print("If you give me two numbers to add, I'll tell you their sum.")
-
+number1 = input("what is the first number?")
+number2 = input("what is the second number?")
+numbersum = int(number1) + int(number2)
+print("the sum of you two numbers is......." + str(numbersum))
+    
 
 # Problem 2: Guess My Number
 
