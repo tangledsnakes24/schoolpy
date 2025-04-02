@@ -17,7 +17,17 @@ print("the sum of you two numbers is......." + str(numbersum))
 
 print("I'm thinking of a number between 1 and 20.")
 print("Guess a number, and I'll tell you if you're too high, too low, or correct")
-
+secretnum = 11
+guess = input("guess my number: ")
+while True:
+    guess = input("guess my number: ")
+    if int(guess) == secretnum:
+        print("you got it!")
+        break
+    if int(guess) > secretnum:
+        print("too big")
+    if int(guess) < secretnum:
+        print("too small")
 
 # Problem 3: Green Glass Door
 
