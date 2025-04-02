@@ -15,7 +15,6 @@ print("the sum of you two numbers is......." + str(numbersum))
 
 # Problem 2: Guess My Number
 
-print("I'm thinking of a number between 1 and 20.")
 print("Guess a number between 0 and 30, and I'll tell you if you're too high, too low, or correct")
 secretnum = random.randint(1, 30)
 guess = input("guess my number: ")
